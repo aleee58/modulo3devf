@@ -1,16 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="baseDeDatosCSS.css">
     <title>Base de datos Alumnos Destacados</title>
 </head>
+
 <body>
-    <div>
-    <class id="alumnos">
+
+    <section>
+        <div class="inicio">
+            <div class="buscar">
+                <input type="text" placeholder="BUSCAR">
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 border-end menuLateral text-start">
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="mostrarContenido('contenido1')">Alumnos</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="mostrarContenido('contenido2')">Cursos</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="mostrarContenido('contenido3')">Promedio</button>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="agregarAlumno('agregar')">Agregar</button>
 
 
-    </class>
-    </div>
+                    <button type="button" class="btn btn-outline-primary"
+                        onclick="getLocalStorage('revisa')">Revisar</button>
+
+                </div>
+        </div>
+
+            <div class="col-9">
+                <div id="contenido1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-9">
+                    <div id="contenido2">
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th>Nombre</th>
+                                    <th>Cursos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="col-9">
+                    <div id="contenido3">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Promedios</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-9">
+                    <div id="revisa">
+                        <table class="revisa">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div id="agregar">
+                                            <form onsubmit="agregarAlumno(); return false;">
+
+                                                <label for="nombre">Nombre:</label>
+                                                <input type="text" id="nombre" name="nombre" required>
+
+                                                <label for="apellido">Apellido:</label>
+                                                <input type="text" id="apellido" name="apellido" required>
+
+                                                <label for="edad">Edad:</label>
+                                                <input type="number" id="edad" name="edad" required>
+
+                                                <label for="curso">Curso:</label>
+                                                <input type="text" id="curso" name="curso" required>
+
+                                                <label for="promedio">Promedio:</label>
+                                                <input type="number" id="promedio" name="promedio" required>
+
+                                                <button type="submit">Agregar Alumno</button>
+                                            </form>
+                                        </div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-9">
+                        <div id="revisa">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+    </section>
+
+
+
+    <script src="baseDeDatosJS.js"></script>
 </body>
+
 </html>

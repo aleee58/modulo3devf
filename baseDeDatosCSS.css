@@ -1,0 +1,38 @@
+html {
+    font-family: 'Arial', sans-serif;
+    color: aquamarine;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+   
+}
+
+.inicio {
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+} 
+
+.buscar input {
+    width: 100%;
+    padding: 8px;
+}
+
+.menuLateral {
+    padding: 10px;
+    width: 200px;
+    background-color: #adcae7; 
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+}
+form {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+}
